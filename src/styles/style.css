@@ -5,3 +5,16 @@
 
   color: #fff;
 }
+
+:root {
+  --white-color: #FFFFFF;
+  --dark-color: #2A2626;
+  --light-color: #F5F4F0;
+  --dark-50-color: #908D8B;
+  --brown-color: #B09A81;
+  --primary-color: #FE8A02;
+  --primary-dark-color: #42413C;
+  --white-50-color: #D7CCC0;
+  --bg-image: url("/img/background.png");
+}
+
