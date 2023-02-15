@@ -7,14 +7,341 @@
 }
 
 :root {
-  --white-color: #FFFFFF;
-  --dark-color: #2A2626;
-  --light-color: #F5F4F0;
-  --dark-50-color: #908D8B;
-  --brown-color: #B09A81;
-  --primary-color: #FE8A02;
-  --primary-dark-color: #42413C;
-  --white-50-color: #D7CCC0;
-  --bg-image: url("/img/background.png");
+  --white-color: #fff;
+  --dark-color: #2a2626;
+  --light-color: #f5f4f0;
+  --dark-50-color: #908d8b;
+  --brown-color: #b09a81;
+  --primary-color: #fe8a02;
+  --primary-dark-color: #42413c;
+  --white-50-color: #d7ccc0;
+  --primary-hover-color: #ea7600;
+  --bg-image: url("../img/background.png");
 }
 
+@font-face {
+  font-family: OpenSans;
+  src: url("./Open_Sans/static/OpenSans/OpenSans-Regular.ttf");
+}
+
+@font-face {
+  font-family: Neucha;
+  src: url("./Neucha/Neucha-Regular.ttf");
+}
+
+body {
+  font-family: OpenSans;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.6em;
+  color: var(--dark-color);
+  align-items: center;
+}
+
+h1, h2, h3, h4 {
+  font-family: Neucha;
+  line-height: 1.2em;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 72px;
+}
+
+h2 {
+  font-size: 60px;
+  color: var(--primary-color);
+}
+
+h3 {
+  font-size: 34px;
+}
+
+h4 {
+  font-size: 14px;
+}
+
+.relative {
+  position: relative;
+}
+
+.background::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.1;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  content: url("../img/background.png");
+}
+
+.email-btn::before {
+  content: url("../img/send.svg");
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.header-img {
+  height: 525px;
+  position: absolute;
+  top: 55px;
+  right: -270px;
+}
+
+.section {
+  width: 1110px;
+  padding: 100px 0;
+  text-align: left;
+}
+
+.background {
+  width: 100vw;
+  justify-content: center;
+}
+
+.z-1 {
+  z-index: 1;
+}
+
+.z-2 {
+  z-index: 2;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-menu {
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.flex-grow-1 {
+  flex-grow: 1;
+}
+
+.flex-end {
+  align-items: flex-end;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.middle {
+  vertical-align: middle;
+}
+
+.m-auto {
+  margin: auto;
+}
+
+.m-0 {
+  margin: 0;
+}
+
+.mt-0 {
+  margin-top: 0;
+}
+
+.mb-30 {
+  margin-bottom: 30px;
+}
+
+.mb-210 {
+  margin-bottom: 210px;
+}
+
+.mb--100 {
+  margin-bottom: -100px;
+}
+
+.pad-right-15 {
+  padding-right: 15px;
+}
+
+.pad-left-15 {
+  padding-left: 15px;
+}
+
+.pt-200 {
+  padding-top: 200px;
+}
+
+.pb-0 {
+  padding-bottom: 0;
+}
+
+.pad-footer {
+  padding: 38px 55px 40px;
+}
+
+.width-100 {
+  width: 100%;
+}
+
+.width-50 {
+  width: 50%;
+}
+
+.break {
+  break-after: column;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.fs-52 {
+  font-size: 52px;
+}
+
+.no-decoration {
+  text-decoration: none;
+}
+
+.bg-dark {
+  background-color: var(--primary-dark-color);
+}
+
+.bg-white {
+  background-color: var(--white-color);
+  color: var(--brown-color);
+}
+
+.bg-brown {
+  background-color: var(--brown-color);
+  color: var(--white-color);
+}
+
+.bg-light {
+  background-color: var(--light-color);
+}
+
+.p-color {
+  color: var(--primary-color);
+}
+
+.black {
+  color: var(--dark-color);
+}
+
+.white {
+  color: var(--white-color);
+}
+
+.white-50 {
+  color: var(--white-50-color);
+}
+
+.color-inherit {
+  color: inherit;
+}
+
+nav a:visited {
+  color: inherit;
+}
+
+.filter {
+  filter: drop-shadow(0 16px 32px rgba(0 0 0 / 15%));
+}
+
+.card:hover {
+  color: var(--white-color);
+  background-color: var(--primary-color);
+}
+
+.card:hover h2, 
+.card:hover h3 {
+  color: var(--white-color);
+}
+
+.email-btn:hover {
+  background-color: var(--primary-hover-color);
+}
+
+.btn:hover {
+  background-color: var(--primary-hover-color);
+}
+
+.btn {
+  background-color: var(--primary-color);
+  padding: 12px 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+}
+
+.card-1 {
+  width: 350px;
+  margin: 10px;
+}
+
+.card {
+  background-color: var(--light-color);
+  width: 302px;
+  padding: 24px;
+  margin: 10px;
+}
+
+.number {
+  font-size: 64px;
+  line-height: 1;
+  margin: 0 0 40px 0;
+}
+
+.label {
+  font-family: Neucha;
+  font-size: 24px;
+  color: var(--dark-50-color);
+}
+
+.short-description {
+  font-family: Neucha;
+  font-size: 34px;
+  line-height: 41px;
+}
+
+.how {
+  font-family: OpenSans;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  text-transform: uppercase;
+  margin-top: 100px;
+  margin-bottom: 20px;
+}
+
+.email {
+  height: 20px;
+  padding: 15px;
+  border: none;
+}
+
+.agreement {
+  font-size: 12px;
+}
+
+.contacts {
+  font-size: 14px;
+  margin-top: 60px;
+}
+
+.email-btn {
+  height: 50px;
+  width: 70px;
+  padding: 0;
+  border: none;
+  background-color: var(--primary-color);
+  cursor: pointer;
+}
