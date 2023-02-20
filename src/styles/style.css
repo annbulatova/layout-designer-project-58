@@ -51,6 +51,7 @@ h1 {
 h2 {
   font-size: 60px;
   color: var(--primary-color);
+  margin: 0;
 }
 
 h3 {
@@ -88,7 +89,7 @@ section::before {
 .header-img {
   height: 525px;
   position: absolute;
-  top: 55px;
+  top: -55px;
   right: -270px;
 }
 
@@ -156,8 +157,8 @@ section::before {
   margin-bottom: 30px;
 }
 
-.mb-210 {
-  margin-bottom: 210px;
+.mb-110 {
+  margin-bottom: 110px;
 }
 
 .mb--100 {
@@ -181,7 +182,7 @@ section::before {
 }
 
 .pad-footer {
-  padding: 38px 55px 40px;
+  padding: 0 55px;
 }
 
 .width-100 {
@@ -298,7 +299,7 @@ nav a:visited {
 .number {
   font-size: 64px;
   line-height: 1;
-  margin: 0 0 40px 0;
+  margin-bottom: 40px;
 }
 
 .label {
